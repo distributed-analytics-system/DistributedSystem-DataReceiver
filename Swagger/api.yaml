@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info: 
+  title: User behavioral data receiver
+  version: 1.0.0
+paths: 
+  /v1/events: 
+    post:
+      requestBody:
+        description: Events to add to the data lake
+        required: true
+        content:
+          application/json:
+            schema:
+              type: array
+              items:
+                $ref: '#/components/schemas/Event'
+      responses: 
+        201:
+          description: Events processed
+        500:
+          description: Internal server error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+        default:
+          description: Unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas: 
+    Event:
+      type: object
+      properties: 
+        user-uuid: 
+          type: string
+        timestamp:
+          type: integer
+          format: int64
+        screen:
+          type: string
+          enum: [home, account, notifications, settings]
+      required:
+        - user-uuid
+        - timestamp
+        - screen
+    Error:
+      type: object
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
+      required:
+        - code
+        - message
