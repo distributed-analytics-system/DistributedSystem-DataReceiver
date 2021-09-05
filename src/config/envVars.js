@@ -1,4 +1,4 @@
-const { str, port, num } = require('envalid');
+const { str, port } = require('envalid');
 
 module.exports = {
   dataDogHost: {
@@ -16,11 +16,6 @@ module.exports = {
   logLevel: {
     name: 'LOG_LEVEL',
     validator: str({choices: ['error', 'warn', 'info', 'verbose', 'debug', 'silly']})
-  },
-  /** ************** Database connection params *********************/
-  dbQueryTimeout: {
-    name: 'DB_QUERY_TIMEOUT',
-    validator: num()
   },
   /** ************** AWS credentials *********************/
   awsAccessKeyId: {

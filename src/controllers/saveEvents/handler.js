@@ -1,5 +1,5 @@
 'use strict';
-/* istanbul ignore file */
+
 const logger = require('../../logger');
 const error = require('../../errors');
 const datastore = require('../../datastore');
