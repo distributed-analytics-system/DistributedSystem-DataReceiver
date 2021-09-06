@@ -19,8 +19,7 @@ module.exports = async (req, res) => {
     // Save the events into S3
     logger.debug({ message: 'Saving the events into data lake', id: reqId });
     try {
-      // TODO: change key
-      await datastore.write({ bucketName: awsS3BucketName, key: 'test_key', data: JSON.stringify(events) });
+      await datastore.write({ bucketName: awsS3BucketName, key: reqId, data: JSON.stringify(events) });
       logger.debug({ message: 'The events have been successfully saved', id: reqId });
     } catch(err) {
       throw new error.InternalServerError({ message: err.message});
