@@ -30,6 +30,8 @@ The DataReceiver microservice provides REST APIs. The APIs are being used by the
     2. Provide list of env variables in 'root/.env-dev' file with following format: envVar=value
     3. npm start
 
+#### Check available APIs
+After running the service locally, go to your browser and see the APIs with this Url: http://localhost:8080/swagger
 
 #### Maintainer contact
 - vahagsaribeyan@gmail.com
