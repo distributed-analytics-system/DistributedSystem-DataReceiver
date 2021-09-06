@@ -4,7 +4,7 @@ The DataReceiver microservice provides REST APIs. The APIs are being used by the
 
 ## Architecture diagram of the whole system
 
-![Architecture diagram](./docs/image/SequenceDiagram.png)
+![Architecture diagram](./docs/image/ArchDiagram.png)
 
 ## Sequence diagram of the whole system
 
