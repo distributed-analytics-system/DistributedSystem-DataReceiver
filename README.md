@@ -4,11 +4,11 @@ The DataReceiver microservice provides REST APIs. The APIs are being used by the
 
 ## Architecture diagram of the whole system
 
-![Architecture diagram](https://github.com/[vahagsaribekyan]/https://github.com/vahagsaribekyan/DistributedSystem-DataReceiver/blob/main/docs/image/ArchDiagram.png?raw=true)
+![Architecture diagram](./docs/image/SequenceDiagram.png)
 
 ## Sequence diagram of the whole system
 
-![Sequence diagram](https://github.com/[vahagsaribekyan]/https://github.com/vahagsaribekyan/DistributedSystem-DataReceiver/blob/main/docs/image/SequenceDiagram.png?raw=true)
+![Sequence diagram](./docs/image/SequenceDiagram.png)
 
 #### Datastores
 1. Amazon S3 - This is the only data store that the service use. It saves user behavioral data into S3 for further processing by other services.
