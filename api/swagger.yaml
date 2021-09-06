@@ -36,12 +36,15 @@ components:
       properties: 
         user-uuid: 
           type: string
+          example: 3588b44b-ec83-430a-85f1-c4eb6d50ec16
         timestamp:
           type: integer
           format: int64
+          exmaple: 1607110465663
         screen:
           type: string
           enum: [home, account, notifications, settings]
+          example: account
       required:
         - user-uuid
         - timestamp
