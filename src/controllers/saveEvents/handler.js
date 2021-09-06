@@ -4,7 +4,7 @@ const logger = require('../../logger');
 const error = require('../../errors');
 const datastore = require('../../datastore');
 
-const { awsS3BucketName } = require('../config');
+const { awsS3BucketName } = require('../../config');
 
 module.exports = async (req, res) => {
   const {
