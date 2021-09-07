@@ -9,8 +9,7 @@ const { awsS3BucketName } = require('../../config');
 module.exports = async (req, res) => {
   const {
     body: events,
-    metadata: { reqId },
-    headers: { authorization }
+    metadata: { reqId }
   } = req;
 
   logger.debug({ message: `Received events to be stored: ${JSON.stringify(events)}`, id: reqId });
