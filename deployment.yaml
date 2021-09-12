@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: data-receiver
+spec:
+  selector:
+    matchLabels:
+      app: data-receiver
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: data-receiver
+    spec:
+      containers:
+      - name: data-receiver
+        image: 465310913908.dkr.ecr.us-east-2.amazonaws.com/distributed-system:data-receiver
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8081
